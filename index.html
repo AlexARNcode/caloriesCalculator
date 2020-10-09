@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- JS -->
+     <script type="text/javascript" src="scripts/calories.js"></script>
+     
+     
+     <!-- CSS and fonts -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+
+  <body>
+      <header>
+        <h2 class="text-center">Calories Calculator</h2>
+    </header>
+
+    <div class="d-flex justify-content-center">
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <input id="heigth" type="number" pattern="[0-9]*" placeholder="Taille (cm)" min="0" max="300">
+        </div>
+        <div class="p-2">
+          <input id="weight" type="number" pattern="[0-9]*" placeholder="Poids (kgs)" min="0" max="300">
+        </div>
+        <div class="p-2">
+          <input id="age" type="number" pattern="[0-9]*" placeholder="Age" min="0" max="150">
+        </div>
+        
+          <select id="sex" required>
+            <option>Femme</option>
+            <option>Homme</option>
+          </select>
+        
+        <input type="button" value="Calculer calories" class="btn btn-primary" onclick="calculateCalories()">
+      </div>  
+    </div>
+  
+    <!-- Output -->
+    <div id="output" class="text-center">
+      Bite
+    </div>
+  </body>
+</html>
+
