@@ -17,29 +17,29 @@
         <h1 class="text-center">Calories Calculator</h1>
     </header>
 
-    <div class="d-flex justify-content-center">
+    <div class="jumbotron p-2 d-flex justify-content-center">
       <div class="d-flex flex-column">
         <div class="p-2">
-          <input id="heigth" type="number" pattern="[0-9]*" placeholder="Taille (cm)" min="0" max="300">
+          <input id="heigth" type="number" pattern="[0-9]*" placeholder="Taille (cm)" min="0" max="300" class="form-control">
         </div>
         <div class="p-2">
-          <input id="weight" type="number" pattern="[0-9]*" placeholder="Poids (kgs)" min="0" max="300">
+          <input id="weight" type="number" pattern="[0-9]*" placeholder="Poids (kgs)" min="0" max="300" class="form-control">
         </div>
         <div class="p-2">
-          <input id="age" type="number" pattern="[0-9]*" placeholder="Age" min="0" max="150">
+          <input id="age" type="number" pattern="[0-9]*" placeholder="Age" min="0" max="150" class="form-control">
         </div>
         
-          <select id="sex" required>
+          <select id="gender" class="form-control" required>
             <option>Femme</option>
             <option>Homme</option>
           </select>
         
-        <input type="button" value="Calculer calories" class="m-2 btn btn-primary" onclick="calculateCalories()">
+        <input type="button" value="Calculer calories" class="m-2 btn btn-primary btn-lg" onclick="calculateCalories()">
       </div>  
     </div>
   
     <!-- Output -->
-    <div id="output" class="m-4 text-center">
+    <div id="output" class="p-2 text-center jumbotron">
       
     </div>
   </body>
