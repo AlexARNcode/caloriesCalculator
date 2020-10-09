@@ -16,7 +16,7 @@ else {
 
 
 // Output for end user
-let output = "Metabolisme de base pour " + sex + " : " + metabolism;
+let output = "Metabolisme de base pour " + sex + " : <strong>" + metabolism + "</strong> calories par jour.";
 
 document.getElementById("output").innerHTML = output;
 }
