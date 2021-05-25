@@ -23,15 +23,25 @@ const extremelyActive = (metabolism * 1.9).toFixed(0);
 
 
 // Output for end user
-let output ="<h2>Métabolisme de base</h2>";
-output += `<p class="lead">Metabolisme de base pour <strong>${gender}</strong> : <strong>${metabolism} kilocalories par jour.</strong><br> C'est le nombre de kilocalories que dépense votre corps au repos.</p>`;
+const outputElement = document.getElementById('output');
+const outputTemplate = document.getElementById('outputTemplate');
 
-output += "<h2>Calories à consommer quotidiennement selon votre profil</h2>";
-output += `<ul class="list-group"><li class="list-group-item">Sédentaire : ${sedentary} Kcal / jour</li>`;
-output += `<li class="list-group-item">Légèrement actif (sport 1 à 3 fois par semaine) : ${lightlyActive} Kcal / jour</li>`;
-output += `<li class="list-group-item">Actif (sport 3 à 5 fois par semaine) : ${active} Kcal / jour</li>`;
-output += `<li class="list-group-item">Très actif (sport quotidien)  : ${reallyActive} Kcal / jour</li>`;
-output += `<li class="list-group-item">Extrêmement actif (travail extrêmement physique ou sportif de haut niveau) : ${extremelyActive} Kcal / jour</li></ul>`;
+// Clone the template
+const templateClone = outputTemplate.content.cloneNode(true);
 
-document.getElementById("output").innerHTML = output;
+// Modify the template values
+console.log(gender);
+templateClone.getElementById('gender').textContent = gender;
+templateClone.getElementById('BasalMetabolismKcalPerDay').textContent = metabolism;
+
+templateClone.getElementById('sedentaryKcalPerDay').textContent = sedentary;
+templateClone.getElementById('lightlyActiveKcalPerDay').textContent = lightlyActive;
+templateClone.getElementById('activeKcalPerDay').textContent = active;
+templateClone.getElementById('veryActiveKcalPerDay').textContent = reallyActive;
+templateClone.getElementById('extremlyActiveKcalPerDay').textContent = extremelyActive;
+
+// Reset the output area (to avoid repetition)
+outputElement.innerHTML = '';
+// Display the template on the page
+outputElement.appendChild(templateClone);
 }
