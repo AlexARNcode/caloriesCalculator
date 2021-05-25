@@ -51,21 +51,22 @@
   </div>
 
   <!-- Output -->
-  <template id="output" class="p-2 text-center jumbotron">
-    <div id="output" class="p-2 text-center jumbotron">
+  <template id="outputTemplate" class="p-2 text-center jumbotron">
+    <div>
       <h2>Métabolisme de base</h2>
-      <p class="lead">Metabolisme de base pour <strong>Homme</strong> : <strong><!-- 1840 kilocalories par jour. --></strong><br>
+      <p class="lead">Metabolisme de base pour <strong id="gender"><!-- Homme --></strong> : <strong id="BasalMetabolismKcalPerDay"><!-- 1840 kilocalories par jour. --></strong><br>
         C'est le nombre de kilocalories que dépense votre corps au repos.</p>
       <h2>Calories à consommer quotidiennement selon votre profil</h2>
       <ul class="list-group">
-        <li class="list-group-item"><!-- Sédentaire : 2208 Kcal / jour --></li>
-        <li class="list-group-item"><!-- Légèrement actif (sport 1 à 3 fois par semaine) : 2530 Kcal / jour --></li>
-        <li class="list-group-item"><!-- Actif (sport 3 à 5 fois par semaine) : 2852 Kcal / jour --></li>
-        <li class="list-group-item"><!-- Très actif (sport quotidien) : 3174 Kcal / jour --></li>
-        <li class="list-group-item"><!-- Extrêmement actif (travail extrêmement physique ou sportif de haut niveau) : 3496 Kcal / jour --></li>
+        <li class="list-group-item">Sédentaire : <span id="sedentaryKcalPerDay">2208</span> Kcal / jour</li>
+        <li class="list-group-item">Légèrement actif (sport 1 à 3 fois par semaine) : <span id="lightlyActiveKcalPerDay">2530</span> Kcal / jour</li>
+        <li class="list-group-item">Actif (sport 3 à 5 fois par semaine) : <span id="activeKcalPerDay">2852</span> Kcal / jour</li>
+        <li class="list-group-item">Très actif (sport quotidien) : <span id="veryActiveKcalPerDay">3174</span> Kcal / jour</li>
+        <li class="list-group-item">Extrêmement actif (travail extrêmement physique ou sportif de haut niveau) : <span id="extremlyActiveKcalPerDay">3496</span> Kcal / jour</li>
       </ul>
     </div>
   </template>
+
   <div id="output" class="p-2 text-center jumbotron">
 
   </div>
