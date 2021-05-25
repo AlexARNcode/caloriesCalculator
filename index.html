@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- JS -->
-  <script type="text/javascript" src="scripts/calories.js"></script>
+  <script type="text/javascript" src="scripts/calories.js" defer></script>
 
 
   <!-- CSS and fonts -->
@@ -19,7 +19,7 @@
   </header>
 
   <div class="jumbotron p-2 d-flex justify-content-center">
-    <form>
+    <form action="" id="calculateKcalForm">
 
       <div class="form-group">
         <label for="heigth">Taille (cm)</label>
@@ -45,8 +45,8 @@
           <option value="Homme" selected>Homme</option>
         </select>
       </div>
-
-      <input type="button" value="Calculer calories" class="btn btn-primary btn-lg" onclick="calculateCalories()">
+     <!--  <button type="submit" class="btn btn-primary">Valider</button> -->
+      <input type="submit" value="Calculer calories" class="btn btn-primary btn-lg">
     </form>
   </div>
 
