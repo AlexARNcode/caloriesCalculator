@@ -19,56 +19,53 @@
   </header>
 
   <div class="jumbotron p-2 d-flex justify-content-center">
-    <form action="calculateCalories()">
+    <form>
 
       <div class="form-group">
         <label for="heigth">Taille (cm)</label>
         <input type="number" class="form-control" id="heigth" placeholder="Taille (cm)" min="0" max="300"
-          pattern="[0-9]*">
+          pattern="[0-9]*" value=180>
       </div>
 
       <div class="form-group">
         <label for="weight">Poids (kgs)</label>
         <input type="number" class="form-control" id="weight" placeholder="Poids (kgs)" min="0" max="300"
-          pattern="[0-9]*">
+          pattern="[0-9]*" value=80>
       </div>
 
       <div class="form-group">
         <label for="age">Age</label>
-        <input type="number" class="form-control" id="age" placeholder="Age" min="0" max="150" pattern="[0-9]*">
+        <input type="number" class="form-control" id="age" placeholder="Age" min="0" max="150" pattern="[0-9]*"
+          value=33>
       </div>
       <div class="form-group">
         <label for="gender">Sexe</label>
         <select class="form-control" id="gender">
-          <option>Femme</option>
-          <option>Homme</option>
+          <option value="Femme">Femme</option>
+          <option value="Homme" selected>Homme</option>
         </select>
       </div>
 
-
-     <input type="button" value="Calculer calories" class="btn btn-primary btn-lg" onclick="calculateCalories()">
+      <input type="button" value="Calculer calories" class="btn btn-primary btn-lg" onclick="calculateCalories()">
     </form>
-    <!--      <div class="d-flex flex-column">
-        <div class="p-2">
-          <input id="heigth" type="number" pattern="[0-9]*" placeholder="Taille (cm)" min="0" max="300" class="form-control">
-        </div>
-        <div class="p-2">
-          <input id="weight" type="number" pattern="[0-9]*" placeholder="Poids (kgs)" min="0" max="300" class="form-control">
-        </div>
-        <div class="p-2">
-          <input id="age" type="number" pattern="[0-9]*" placeholder="Age" min="0" max="150" class="form-control">
-        </div>
-        
-          <select id="gender" class="form-control" required>
-            <option>Femme</option>
-            <option>Homme</option>
-          </select>
-        
-        <input type="button" value="Calculer calories" class="m-2 btn btn-primary btn-lg" onclick="calculateCalories()">
-      </div>   -->
   </div>
 
   <!-- Output -->
+  <template id="output" class="p-2 text-center jumbotron">
+    <div id="output" class="p-2 text-center jumbotron">
+      <h2>Métabolisme de base</h2>
+      <p class="lead">Metabolisme de base pour <strong>Homme</strong> : <strong><!-- 1840 kilocalories par jour. --></strong><br>
+        C'est le nombre de kilocalories que dépense votre corps au repos.</p>
+      <h2>Calories à consommer quotidiennement selon votre profil</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><!-- Sédentaire : 2208 Kcal / jour --></li>
+        <li class="list-group-item"><!-- Légèrement actif (sport 1 à 3 fois par semaine) : 2530 Kcal / jour --></li>
+        <li class="list-group-item"><!-- Actif (sport 3 à 5 fois par semaine) : 2852 Kcal / jour --></li>
+        <li class="list-group-item"><!-- Très actif (sport quotidien) : 3174 Kcal / jour --></li>
+        <li class="list-group-item"><!-- Extrêmement actif (travail extrêmement physique ou sportif de haut niveau) : 3496 Kcal / jour --></li>
+      </ul>
+    </div>
+  </template>
   <div id="output" class="p-2 text-center jumbotron">
 
   </div>
