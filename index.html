@@ -1,24 +1,54 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- JS -->
-     <script type="text/javascript" src="scripts/calories.js"></script>
-     
-     
-     <!-- CSS and fonts -->
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-      <header>
-        <h1 class="text-center">Calories Calculator</h1>
-    </header>
+  <!-- JS -->
+  <script type="text/javascript" src="scripts/calories.js"></script>
 
-    <div class="jumbotron p-2 d-flex justify-content-center">
-      <div class="d-flex flex-column">
+
+  <!-- CSS and fonts -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center">Calories Calculator</h1>
+  </header>
+
+  <div class="jumbotron p-2 d-flex justify-content-center">
+    <form action="calculateCalories()">
+
+      <div class="form-group">
+        <label for="heigth">Taille (cm)</label>
+        <input type="number" class="form-control" id="heigth" placeholder="Taille (cm)" min="0" max="300"
+          pattern="[0-9]*">
+      </div>
+
+      <div class="form-group">
+        <label for="weight">Poids (kgs)</label>
+        <input type="number" class="form-control" id="weight" placeholder="Poids (kgs)" min="0" max="300"
+          pattern="[0-9]*">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Age" min="0" max="150" pattern="[0-9]*">
+      </div>
+      <div class="form-group">
+        <label for="gender">Sexe</label>
+        <select class="form-control" id="gender">
+          <option>Femme</option>
+          <option>Homme</option>
+        </select>
+      </div>
+
+
+     <input type="button" value="Calculer calories" class="btn btn-primary btn-lg" onclick="calculateCalories()">
+    </form>
+    <!--      <div class="d-flex flex-column">
         <div class="p-2">
           <input id="heigth" type="number" pattern="[0-9]*" placeholder="Taille (cm)" min="0" max="300" class="form-control">
         </div>
@@ -35,13 +65,13 @@
           </select>
         
         <input type="button" value="Calculer calories" class="m-2 btn btn-primary btn-lg" onclick="calculateCalories()">
-      </div>  
-    </div>
-  
-    <!-- Output -->
-    <div id="output" class="p-2 text-center jumbotron">
-      
-    </div>
-  </body>
-</html>
+      </div>   -->
+  </div>
 
+  <!-- Output -->
+  <div id="output" class="p-2 text-center jumbotron">
+
+  </div>
+</body>
+
+</html>
