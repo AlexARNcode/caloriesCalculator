@@ -11,5 +11,6 @@ You don't need anything except a web browser that supports JS.
 ## Usage
 
 1/ Enter your personal info.
+
 2/ Click on the button.
 
